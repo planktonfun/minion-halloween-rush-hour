@@ -2,6 +2,21 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css" media="screen">
+		body {
+		    margin: 0;            /* Reset default margin */
+		}
+		iframe {
+		    display: block;       /* iframes are inline by default */
+		    background: #000;
+		    border: none;         /* Reset default border */
+		    height: 100vh;        /* Viewport-relative units */
+		    width: 100vw;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="frame"></iframe>
 	<script>
 		var urls = [
 			'./red.html',
@@ -11,10 +26,7 @@
 			'./billy.html',
 		];
 
-		location.href = urls[Math.floor(Math.random()*urls.length)];
+		document.getElementById('frame').src = urls[Math.floor(Math.random()*urls.length)];
 	</script>
-</head>
-<body>
-
 </body>
 </html>
